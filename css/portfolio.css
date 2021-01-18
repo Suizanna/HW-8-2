@@ -142,58 +142,68 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .header {
-    position: relative;
-    border: 1px solid #ececec;
-  }
-  .container-main {
+.header {
+  position: relative;
+  border: 1px solid #ececec;
+}
+
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-bg-color);
-  }
-  .menu-btn {
-    display: inline-flex;
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    background-color: transparent;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (min-width: 768px) {
-  .menu-btn.is-open {
+.main-nav .menu-btn {
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav .menu-btn.is-open {
     display: none;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .menu-btn .icon-menu {
-    display: none;
-  }
-  .menu-btn.is-open .icon-cross {
-    display: none;
-  }
-  .menu-btn.is-open .icon-menu {
-    display: block;
-  }
-  .menu-btn:hover {
-    fill: var(--accent-color);
-  }
-  .menu-container {
-    background-color: var(--primary-bg-color);
-    text-align: center;
-    padding: 60px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(165, 158, 158, 0.16);
-  }
-  .menu-container.is-open {
-    display: block;
-  }
+.main-nav .menu-btn .icon-menu {
+  display: none;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (max-width: 767px) {
-  .menu-container {
+.main-nav .menu-btn.is-open .icon-cross {
+  display: none;
+}
+
+.main-nav .menu-btn.is-open .icon-menu {
+  display: block;
+}
+
+.main-nav .menu-btn:hover {
+  fill: var(--accent-color);
+}
+
+.main-nav .menu-container {
+  background-color: var(--primary-bg-color);
+  text-align: center;
+  padding: 60px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(165, 158, 158, 0.16);
+}
+
+.main-nav .menu-container.is-open {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .main-nav .menu-container {
     display: none;
     position: absolute;
     top: 100%;
@@ -202,14 +212,8 @@ img {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (min-width: 768px) {
-  .menu-container {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (min-width: 320px) and (max-width: 767px) {
-  .menu-container-link {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-nav .menu-link {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -218,66 +222,50 @@ img {
     letter-spacing: 0.02em;
     display: block;
   }
-  .menu-link:hover,
-  .menu-link:focus {
+  .main-nav .menu-link:hover,
+  .main-nav .menu-link:focus {
     color: var(--accent-color);
   }
-  .menu-link {
+  .main-nav .menu-link {
     color: var(--title-text-color);
   }
-  .item:not(:last-child) {
+  .main-nav .item:not(:last-child) {
     margin-bottom: 40px;
   }
-  .link {
+  .main-nav .link {
     color: var(--primary-text-color);
     /*#757575;*/
   }
-  .contact-nav {
+  .main-nav .contact-nav {
     margin-top: 60px;
   }
-  .contact-item:not(:last-child) {
+  .main-nav .contact-item:not(:last-child) {
     margin-bottom: 16px;
   }
-  .contact-item-svg-envelope,
-  .contact-item-svg-Mobile {
+  .main-nav .contact-item-svg-envelope,
+  .main-nav .contact-item-svg-Mobile {
     margin-right: 10px;
     fill: var(--primary-text-color);
     /*#757575;*/
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .menu-container-link.nav {
-    position: relative;
-  }
+.main-nav .menu-container-link.nav {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-btn {
+  .main-nav {
+    /*=========================================================================*/
+    /*TABLET*/
+    /* Навигация на другие страницы ========== */
+    /* outline: 1px solid transparent;*/
+  }
+  .main-nav .menu-btn {
     display: none;
   }
 }
 
-/*=========================================================================*/
-/*TABLET*/
-@media screen and (min-width: 1200px) {
-  .header {
-    position: relative;
-    border-bottom: 1px solid #ececec;
-  }
-}
-
-.container-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-bg-color);
-  height: 80px;
-  max-width: 1200px;
-}
-
-/* Навигация на другие страницы ========== */
-/* outline: 1px solid transparent;*/
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-nav {
     display: block;
